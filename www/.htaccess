@@ -1,0 +1,10 @@
+php_value include_path  ".;d:\wamp\www\shares;d:\wamp\www\adodb"
+php_value short_open_tag "On"
+php_value error_reporting "E_ALL & ~NOTICE"
+php_value default_charset   "utf-8"
+
+php_value session.save_handler  "files"
+php_value session.gc_maxlifetime  "1800"
+
+
+

@@ -1,0 +1,139 @@
+@font-face{font-family:'DroidNaskh';src:url(../fonts/DroidNaskh-Regular.eot);src:url(../fonts/DroidNaskh-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/DroidNaskh-Regular.woff) format("woff"),url(../fonts/DroidNaskh-Regular.ttf) format("truetype");font-weight:400;font-style:normal}@font-face{font-family:'DroidNaskh';src:url(../fonts/DroidNaskh-Bold.ttf) format("truetype");font-weight:700;font-style:normal}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons.woff2) format('woff2');
+}
+*{font-family:DroidNaskh,verdana,tahoma}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.lfont {font-size: 40px}
+.mfont {font-size: 20px}
+.sfont {font-size: 15px}
+.customsize { width: 300px;}
+.HeaderOfTable
+{
+		background-color: #32c5d2; 
+}
+.FooterOfTable
+{
+		background-color: #32c5d2; 
+}
+.EvenRow
+{
+		background-color: #dddddd;  
+}
+.OddRow
+{
+		background-color: #ffffff; 
+}
+table
+{
+	direction: rtl;
+}
+.custom-combobox {
+	position: relative;
+	display: inline-block;
+	direction: rtl;
+}
+.custom-combobox-toggle {
+	direction: rtl;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-left: -1px;
+	padding: 0;
+}
+.custom-combobox-input {
+	direction: rtl;
+	margin: 0;
+	padding: 5px 10px;
+	width: 400px;
+	font-family: DroidNaskh;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button, h5 {
+    font-family: DroidNaskh,verdana,tahoma;
+    font-size: 1em;
+}
+
+.DivRtl { background: #95a5a6; direction:rtl; }
+
+.SeperatorColor { background: #95a5a6; }
+
+.table-borderless td, .table-borderless th 
+{
+	border: none;
+}
+
+.align-left{text-align:left}
+.align-right{text-align:right}
+
+.page-content {
+    background: #eef1f5;
+	margin-right: 0px;
+	margin-left: 19px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.sadaf-xs-input
+{
+	width: 50px;
+}
+
+.sadaf-s-input
+{
+	width: 100px;
+}
+
+.sadaf-m-input
+{
+	width: 300px;	
+}
+
+.sadaf-l-input
+{
+	width: 600px;	
+}
+
+.modal-header .close
+{
+	margin: 0;	
+}
+
+.modal-lg {
+    width: 900px;
+}
+
+.MenuColor { 
+	background-color: #28acb8; 
+	color: #fff; 
+	z-index: 2; 
+	text-decoration: none;
+	border-bottom-left-radius: .25rem;
+	border-bottom-right-radius: .25rem;
+	border-top-right-radius: .25rem;
+	border-top-left-radius: .25rem;
+	position: relative;
+	display: block;
+	padding: .75rem 1.25rem;
+	border: 1px solid rgba(0,0,0,.125);
+	width: 100%;
+}
