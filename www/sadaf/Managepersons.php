@@ -169,9 +169,6 @@ for($k=0; $k<count($res); $k++)
 <form target="_blank" method="post" action="Newpersons.php" id="NewRecordForm" name="NewRecordForm">
 </form>
 <form method="post" name="f2" id="f2">
-<input type="hidden" name="PageNumber" id="PageNumber" value="0">
-<input type="hidden" name="OrderByFieldName" id="OrderByFieldName" value="<? echo $OrderByFieldName; ?>">
-<input type="hidden" name="OrderType" id="OrderType" value="<? echo $OrderType; ?>">
 </form>
 <script>
 
