@@ -3,7 +3,7 @@
 ?>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css" > INPUT, SELECT { font-family: Tahoma }'.
+<style type="text/css" > INPUT, SELECT { font-family: Tahoma }
 </style>
 <link rel="stylesheet"  href="css/login.css" type="text/css">
 </head>
