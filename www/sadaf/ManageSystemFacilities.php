@@ -48,7 +48,7 @@ if(isset($_REQUEST["Save"]))
 <input type="hidden" name="UpdateID" id="UpdateID" value='0'>
 <div class="container-fluid">
 
-<? BootStrapModal("UserListDiv", "UserListDivHeader", "UserListDivContent", $title); ?>
+<? BootStrapModal("UserListDiv", "UserListDivHeader", "UserListDivContent", "کاربران"); ?>
 
 <div class="modal fade" id="DataEntryForm" tabindex="-1" role="dialog" aria-labelledby="..." aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
