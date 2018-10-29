@@ -95,8 +95,8 @@ class pdodb {
   }
   static function LogQueryToDB($mainQuery,$time,$DBName,$QueryStatus='SUCCESS',$parameter_array=array()){
     if(((isset($_SESSION['User']) && self::$logQuery)) || ($QueryStatus=='FAILED') ){
-      $mysql = pdodb::getInstance(config::$db_servers['master']['host'],config::$db_servers['master']['dataanalysis_user']
-		                      ,config::$db_servers['master']['dataanalysis_pass'],config::$db_servers['master']['dataanalysis_db']);
+      $mysql = pdodb::getInstance(config::$db_servers['master']['host'],config::$db_servers['master']['sadaf_user']
+		                      ,config::$db_servers['master']['sadaf_pass'],config::$db_servers['master']['sadaf_db']);
       $query = "insert into SystemDBLog (page,query,SerializedParam,UserID,IPAddress,SysCode,ExecuteTime,QueryStatus,DBName)
             values (:page,:query,:SerializedParam,:UserID,:IPAddress,:SysCode,:ExecuteTime,:QueryStatus,:DBName)";
       $st = $mysql->prepare($query);
