@@ -177,7 +177,7 @@ class manage_UserFacilities
 	* @param $OtherConditions سایر مواردی که باید به انتهای شرایط اضافه شوند
 	* @return لیست داده های حاصل جستجو
 	*/
-	static function Search($FacilityID, $UserID, $FacilityID, $OtherConditions)
+	static function Search($FacilityID, $UserID, $OtherConditions)
 	{
 		$mysql = pdodb::getInstance();
 		$k=0;
