@@ -78,7 +78,7 @@ if(isset($_REQUEST["Save"]))
 					<td nowrap>
 					<select class="form-control sadaf-m-input" name="Item_GroupID" id="Item_GroupID">
 					<option value=0>-
-					<? echo SharedClass::CreateARelatedTableSelectOptions("lab.SystemFacilityGroups", "GroupID", "GroupName", "GroupName"); ?>	</select>
+					<? echo SharedClass::CreateARelatedTableSelectOptions("SystemFacilityGroups", "GroupID", "GroupName", "GroupName"); ?>	</select>
 					</td>
 				</tr>
 				<tr>
@@ -109,8 +109,6 @@ if(isset($_REQUEST["Save"]))
   </div>
 </div>
 
-
-
 <input type="hidden" name="Save" id="Save" value="1">
 </form><script>
 	function ValidateForm()
@@ -119,6 +117,7 @@ if(isset($_REQUEST["Save"]))
 	}
 </script>
 <?php 
+
 $res = manage_SystemFacilities::GetList(); 
 $SomeItemsRemoved = false;
 for($k=0; $k<count($res); $k++)
