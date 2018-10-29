@@ -95,9 +95,10 @@ class SharedClass
 	static function CreateADomainNameSelectOptions($DomainName, $OrderByColumn = "description")
 	{
 		$ret = "";
-		$mysql = dbclass::getInstance();
-		$res = $mysql->Execute("select * from sadaf.domains where DomainName='".$DomainName."' order by ".$OrderByColumn);
-		while($rec = $res->FetchRow())
+		$mysql = pdodb::getInstance();
+		$mysql->Execute("select * from sadaf.domains where DomainName='".$DomainName."' order by ".$OrderByColumn);
+                $res = $mysql->ExecuteStatement(array());
+		while($rec = $res->fetch())
 		{
 			$ret .= "<option value='".$rec["DomainValue"]."'>";
 			$ret .= $rec["description"];
@@ -112,9 +113,10 @@ class SharedClass
 		if($OrderBy=="")
 			$OrderBy = $RelatedValueField;
 		$ret = "";
-		$mysql = dbclass::getInstance();
-		$res = $mysql->Execute("select * from ".$RelatedTable." order by ".$OrderBy);
-		while($rec = $res->FetchRow())
+		$mysql = pdodb::getInstance();
+		$mysql->Prepare("select * from ".$RelatedTable." order by ".$OrderBy);
+                $res = $mysql->ExecuteStatement(array());
+		while($rec = $res->fetch())
 		{
 			$ret .= "<option value='".$rec[$RelatedValueField]."'>";
 			$ret .= $rec[$RelatedDescriptionField];
@@ -128,9 +130,10 @@ class SharedClass
 		if($OrderBy=="")
 			$OrderBy = $RelatedValueField;
 		$ret = "";
-		$mysql = dbclass::getInstance();
-		$res = $mysql->Execute("select ".$SelectOptions." from ".$RelatedTable." order by ".$OrderBy);
-		while($rec = $res->FetchRow())
+		$mysql = pdodb::getInstance();
+		$mysql->Prepare("select ".$SelectOptions." from ".$RelatedTable." order by ".$OrderBy);
+                $res = $mysql->ExecuteStatement(array());
+		while($rec = $res->fetch())
 		{
 			$ret .= "<option value='".$rec[$RelatedValueField]."'>";
 			$ret .= $rec[$RelatedDescriptionField];
