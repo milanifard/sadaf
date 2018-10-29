@@ -8,8 +8,6 @@ include("header.inc.php");
 include("classes/UserFacilities.class.php");
 include ("classes/SystemFacilities.class.php");
 include ("classes/SystemFacilityGroups.class.php");
-include ("classes/ExamTypes.class.php");
-include ("classes/ExamGroups.class.php");
 HTMLBegin();
 if(isset($_REQUEST["Save"])) 
 {
