@@ -28,6 +28,9 @@
 			$_SESSION["PersonID"] = $trec["PersonID"];
 			$_SESSION["UserName"] = $trec["pfname"]." ".$trec["plname"];
 			$_SESSION["LIPAddress"] = ip2long(SharedClass::getRealIpAddr());
+			if($_SESSION["LIPAddress"]=="") {
+                $_SESSION["LIPAddress"] = 0;
+            }
 			echo "<script>document.location='main.php';</script>";
 			die();
 		}
