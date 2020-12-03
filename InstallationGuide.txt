@@ -1,4 +1,3 @@
 1- create database, tables and basic data rows by impoting simple-sadaf-database.sql into mysql db.
-2- copy www files in your wwww
-3- set database username and password in both shares/config.calss.php and shares/MySql.config.php files.
-4- use sadaf/login.php page for login (user: omid password: omid3000)
+2- set database username and password in both shares/config.calss.php and shares/MySql.config.php files.
+3- use sadaf/login.php page for login (user: omid password: omid3000)
