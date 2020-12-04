@@ -3,3 +3,5 @@
 
 #config files
 www/.htaccess
+shares/MySql.config.php
+shares/config.class.php
