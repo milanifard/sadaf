@@ -43,7 +43,6 @@
 <form method=post>
 
 <div class="container-fluid">
-
 <? if($message!="") { ?>
 <div class="row">
 	<div class="col-1" ></div>
@@ -54,7 +53,6 @@
 	</div>
 </div>
 <? } ?>
-
 <div class="row">
 <div class="col-3" ></div>
 <div class="col-6" >
