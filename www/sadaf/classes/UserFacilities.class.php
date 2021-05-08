@@ -69,10 +69,10 @@ class manage_UserFacilities
 	}
 	static function GetLastID()
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select max(FacilityPageID) as MaxID from sadaf.UserFacilities";
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["MaxID"];
 		}
@@ -228,7 +228,7 @@ class manage_UserFacilities
 	* @param $OtherConditions سایر مواردی که باید به انتهای شرایط اضافه شوند
 	* @return تعداد داده های حاصل جستجو
 	*/
-	static function SearchResultCount($FacilityID, $UserID, $FacilityID, $OtherConditions)
+	static function SearchResultCount($FacilityID, $UserID, $OtherConditions)
 	{
 		$mysql = pdodb::getInstance();
 		$k=0;
