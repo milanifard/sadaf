@@ -1,4 +1,4 @@
-php_value include_path  ".;d:\wamp64\www\sadaf\www\shares;d:\wamp64\www\sadaf\www\adodb"
+php_value include_path  ".;c:\wamp64\www\sadaf\www\shares;c:\wamp64\www\sadaf\www\adodb"
 php_value short_open_tag "On"
 php_value error_reporting "On"
 php_value display_errors "On"
