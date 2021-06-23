@@ -57,11 +57,11 @@ class manage_UserFacilities
 	
 	static function GetCount($FacilityID)
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select count(FacilityPageID) as TotalCount from sadaf.UserFacilities";
 			$query .= " where FacilityID='".$FacilityID."'";
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["TotalCount"];
 		}

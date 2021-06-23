@@ -37,11 +37,11 @@ class manage_FacilityPages
 {
 	static function GetCount($FacilityID)
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select count(FacilityPageID) as TotalCount from sadaf.FacilityPages";
 			$query .= " where FacilityID='".$FacilityID."'";
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["TotalCount"];
 		}
@@ -49,10 +49,10 @@ class manage_FacilityPages
 	}
 	static function GetLastID()
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select max(FacilityPageID) as MaxID from sadaf.FacilityPages";
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["MaxID"];
 		}
