@@ -43,14 +43,14 @@ class manage_AccountSpecs
 {
 	static function GetCount($WhereCondition="")
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select count(AccountSpecID) as TotalCount from sadaf.AccountSpecs";
 		if($WhereCondition!="")
 		{
 			$query .= " where ".$WhereCondition;
 		}
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["TotalCount"];
 		}
@@ -58,10 +58,10 @@ class manage_AccountSpecs
 	}
 	static function GetLastID()
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select max(AccountSpecID) as MaxID from sadaf.AccountSpecs";
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["MaxID"];
 		}
