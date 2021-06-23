@@ -40,14 +40,14 @@ class manage_persons
 {
 	static function GetCount($WhereCondition="")
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select count(PersonID) as TotalCount from sadaf.persons";
 		if($WhereCondition!="")
 		{
 			$query .= " where ".$WhereCondition;
 		}
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["TotalCount"];
 		}
@@ -55,10 +55,10 @@ class manage_persons
 	}
 	static function GetLastID()
 	{
-		$mysql = dbclass::getInstance();
+		$mysql = pdodb::getInstance();
 		$query = "select max(PersonID) as MaxID from sadaf.persons";
 		$res = $mysql->Execute($query);
-		if($rec=$res->FetchRow())
+		if($rec=$res->fetch())
 		{
 			return $rec["MaxID"];
 		}
